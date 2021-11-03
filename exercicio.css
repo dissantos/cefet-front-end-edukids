@@ -12,7 +12,7 @@
  * botões play/stop (para que o elemento se revele lentamente)
  */
  #controles ul {
-
+  transition: transform 750ms ease-in;
  }
 
 /*
@@ -24,17 +24,75 @@
  *   - atacando: animal dá um salto e cresce, com uma borda vermelha
  */
 .com-fome {
-
+  position: relative;
+  animation: rodando 1s ease-in-out 0s infinite alternate;
+  border: 5px dashed brown;
 }
 
-.satisfeito {
+@keyframes rodando {
+  from {
+    transform: rotateX(-30deg);
+  }
+  to {
+    transform: rotate(30deg);
 
+  }
+}
+
+#conteudo{
+  perspective: 1000px;
+}
+.satisfeito {
+  position: relative;
+  border: 5px solid #28eb21;
+  animation: girando 1s linear 0s infinite;
+}
+
+@keyframes girando {
+  from{
+    transform: rotateY(0turn);
+  }
+  to{
+    transform: rotateY(1turn);
+  }
 }
 
 .com-raiva {
-
+  position: relative;
+  border: 5px solid plum;
+  animation: piscando 300ms ease-in-out infinite;
 }
 
-.atacando {
+@keyframes piscando {
+  from{
+    opacity: 1.0;
+  }
+  to{
+    opacity: 0.7;
+  }
+}
 
+
+.atacando {
+  position: relative;
+  animation: piscandoBorda 300ms linear infinite alternate, pulando 300ms ease-in-out infinite alternate;
+  animation-delay: 0s;
+}
+
+@keyframes piscandoBorda {
+  from{
+    border: none;
+  }
+  to{
+    border: 5px solid red;
+  }
+}
+
+@keyframes pulando {
+  from{
+    top: 0;
+  }
+  to {
+    top: -30px;
+  }
 }
