@@ -39,9 +39,10 @@
   }
 }
 
-#conteudo{
+#conteudo {
   perspective: 1000px;
 }
+
 .satisfeito {
   position: relative;
   border: 5px solid #28eb21;
@@ -49,10 +50,10 @@
 }
 
 @keyframes girando {
-  from{
+  from {
     transform: rotateY(0turn);
   }
-  to{
+  to {
     transform: rotateY(1turn);
   }
 }
@@ -64,10 +65,10 @@
 }
 
 @keyframes piscando {
-  from{
+  from {
     opacity: 1.0;
   }
-  to{
+  to {
     opacity: 0.7;
   }
 }
@@ -80,16 +81,16 @@
 }
 
 @keyframes piscandoBorda {
-  from{
+  from {
     border: none;
   }
-  to{
+  to {
     border: 5px solid red;
   }
 }
 
 @keyframes pulando {
-  from{
+  from {
     top: 0;
   }
   to {
